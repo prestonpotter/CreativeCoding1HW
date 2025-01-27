@@ -1,1 +1,1 @@
-This is my week 1 homework.
+This is my Creative Coding Homework
