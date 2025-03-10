@@ -1,1 +1,4 @@
-span {background-color: blue;}
+span {background-color: rgb(255, 118, 118);}
+span {font-family: Verdana, Geneva, Tahoma, sans-serif}
+.large {font-size: 75pt; text-align:center;}
+.bold {font-weight: bolder;}
