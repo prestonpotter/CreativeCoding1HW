@@ -1,0 +1,36 @@
+<html>
+    </head>
+    <style> </style>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/css/bootstrap-reboot.min.css"
+        ">
+    </head>
+    <body>
+        Share Your Contact Information With Us!
+        <br>
+ <script>
+    function getData() {
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+      
+        document.getElementById("finalResult").innteHTML = "name: " + name + "phone: " + phone;}
+         </script>
+         <head>
+            <body>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" id="name"></td>
+                    </tr>
+                    </tr>
+                    <td>Phone Number</td>
+                    <td><input type="text" id="phone"></td>
+                    <tr>
+                        <td colspan="2"><button onclick="getData()">Submit</button></td>
+                </table>
+                <div id="finalResult"></div>
+            </body>
+         </head>
+<a href="index.html">Home</a>
+  
+</html>
