@@ -1,38 +1,69 @@
 <html>
     </head>
-    <style> </style>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles/css/bootstrap-reboot.min.css"
-        ">
-    </head>
-    <body>
+    <link rel="stylesheet" type="css" href="styles/css/bootstrap-reboot.min.css">
+    <style>
+     .highlight {background-color: crimson;} 
+     </style>
+<head>
+<body>
         Share Your Contact Information With Us!
         <br>
- <script>
+        <script>
     function getData() {
         var name = document.getElementById("name").value;
         var phone = document.getElementById("phone").value;
-      if (name == "" || phone == "") 
+        var terms = document.getElementById("terms").checked;
+
+        var nameField = document.getElementById("name");
+        var phoneField = document.getElementById("phone");
+        var termsField = document.getElementById("terms");
+
+        //Remove previous highlights
+        nameField.classList.remove("highlight");
+        phoneField.classList.remove("highlight");
+        termsField.parentElement.classList.remove("highlight");
+
+
+      if (name == "" || phone == "" || terms == false) {
         alert("Please fill out all fields");
-        document.getElementById("finalResult").innteHTML = "name: " + name + "phone: " + phone;}
+
+      if (name == "") {
+        nameField.classList.add("highlight");
+
+        }
+        if (phone == "") {
+            phoneField.classList.add("highlight");
+        }
+
+        if (terms == false) {
+            termsField.parentElement.classList.add("highlight");
+        }
+        return;
+    }
+        document.getElementById("finalResult").innerHTML = "Name: " + name + " - Phone: " + phone;
+    }
          </script>
-         <head>
-            <body>
                 <form>
+                 <table>
                     <tr>
                         <td>Name:</td>
                         <td><input type="text" id="name"></td>
-                        <br>
                     </tr>
                     </tr>
-                    <td>Phone Number</td>
-                    <td><input type="text" id="phone"></td>
+                        <td>Phone Number:</td>
+                        <td><input type="text" id="phone"></td>
                     <tr>
-                        <td colspan="2"><button onclick="getData()">Submit</button></td>
+                    <tr>
+                        <td><input type="checkbox" id="terms">I agree to the terms and conditions</td>
+                    <tr>
+                        <td colspan="2"><button type="button" onclick="getData()">Submit</button></td>
+                        <tr>
+                     <table>
                     </form>
                 <div id="finalResult"></div>
             </body>
-         </head>
+
+    
 <a href="index.html">Home</a>
   
 </html>
