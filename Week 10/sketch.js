@@ -1,18 +1,18 @@
 var armx=100;
-var armmovement=5;
+var armmovement=3;
 
 var footx=100;
-var footmovement=5;
+var footmovement=7
 
 var eyey=100;
 var eyemovement=5;
 
 var legy=100;
-var legmovement=5;
+var legmovement=2;
 
 var bodyx=100;
 var bodyy=100;
-var bodymovement=3;
+var bodymovement=4;
 
 var size=30;
 var count=0;
