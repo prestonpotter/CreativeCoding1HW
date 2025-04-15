@@ -14,6 +14,12 @@ var shapeY = 50;
 var shapeXSpeed;
 var shapeYSpeed;
 
+//obsticle 2 
+var shapeX2 = 300;
+var shapeY2 = -10;
+var shapeXSpeed2;
+var shapeYSpeed2;
+
 //createshapeonclick
 var mouseshapeX
 var mouseshapeY
@@ -55,18 +61,29 @@ function draw()
   stroke(0)
   fill(0)
   
-    //obsticle
+    //obsticle1
 fill(143, 52, 235);
 circle(shapeX,shapeY,90);
+  
+  //obsticle2
+  fill(197, 92, 25);
+circle(shapeX2,shapeY2,50);
   
    //randomspeed
   shapeXSpeed = Math.floor(Math.random() * Math.floor(Math.random() * 15)) 
   shapeYSpeed = Math.floor(Math.random() * Math.floor(Math.random() * 15)) 
 
   
-    //obsticlemove
+    //obsticlemove1
   shapeX += shapeXSpeed;
   shapeY += shapeYSpeed;
+  
+  
+    //obsticlemove2
+  shapeX2 += shapeXSpeed;
+  shapeY2 += shapeYSpeed;
+  
+  
   //outofbounds
   if(shapeX > width)
     {
@@ -85,6 +102,23 @@ circle(shapeX,shapeY,90);
       shapeY = height;
     }
   
+  //outofbounds
+  if(shapeX2 > width)
+    {
+      shapeX2 = 0;
+    }
+  if(shapeX2 < 0)
+    {
+      shapeX2 = width;
+    }
+  if(shapeY2 > height)
+    {
+      shapeY2 = 0;
+    }
+  if(shapeY2 < 0)
+    {
+      shapeY2 = height;
+    }
   
     
   
