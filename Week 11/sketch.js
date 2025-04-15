@@ -67,7 +67,7 @@ circle(shapeX,shapeY,90);
   
   //obsticle2
   fill(197, 92, 25);
-circle(shapeX2,shapeY2,50);
+square(shapeX2,shapeY2,50);
   
    //randomspeed
   shapeXSpeed = Math.floor(Math.random() * Math.floor(Math.random() * 15)) 
@@ -131,7 +131,7 @@ circle(shapeX2,shapeY2,50);
       fill(5)
       stroke(10)
       textSize(30)
-      text("YOU WIN!,", 180, 300)
+      text("YOU WIN!", 180, 300)
     }
   else 
     {
