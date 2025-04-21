@@ -104,7 +104,7 @@ if(characterX > width -75 && characterY > height)
       fill(5)
       stroke(10)
       textSize(30)
-      text("YOU WIN!", 180, 300)
+      text("YOU WIN!" 180, 300)
     }
   else 
     {
