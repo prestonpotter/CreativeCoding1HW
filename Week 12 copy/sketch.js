@@ -8,11 +8,12 @@ var space = 32
 
 function setup() {
   createCanvas(600, 600);
+  currentImage=T1
 }
 
 function draw() {
-  background(220);
-  image(T1, T1X, T1Y,130,130)
+  background(bg);
+  image(currentImage, T1X, T1Y,90,90)
   
   Movement();
   
@@ -23,6 +24,7 @@ function preload()
 {
   T1=loadImage('thrower1.png')
   T2=loadImage('thrower2.png')
+  bg=loadImage('background.png')
 }
 
 let T1, T2;
@@ -34,7 +36,7 @@ let speed = 5;
   function throwimage()
   {
   if (keyCode === 32) {
-    currentImage=T2;
+    currentImage = T2;
     setTimeout ( () => {
       currentImage = T1;
     }, 1000);
