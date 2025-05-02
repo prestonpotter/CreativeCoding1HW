@@ -64,7 +64,7 @@ function preload()
   bg=loadImage('background.png')
   S1=loadImage('snowman1.png')
   S2=loadImage('snowman2.png')
-  TH=loadImage('thtest.png')
+  TH=loadImage('throwerhit.png')
   SH=loadImage('snowmanhit.png')
 }
 
