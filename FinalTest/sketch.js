@@ -54,6 +54,7 @@ function draw() {
   background(bg);
   image(Left, 10, 10, 115, 115)
   image(Right, 490, 8, 115, 115)
+  image(Gamelogo, 210, 15, 200,150)
   image(currentImageT, T1X, T1Y,90,90)
   image(currentImageS, S1X,S1Y,90,90)
   TMovement();
@@ -127,6 +128,7 @@ function preload()
   Reset=loadImage('resetbutton.png')
   Left=loadImage('TI.png')
   Right=loadImage('SM.png')
+Gamelogo=loadImage('gamelogo.png')
 }
 
 
