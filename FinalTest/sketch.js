@@ -21,6 +21,9 @@ let bg;
 let currentImageT;
 let currentImageS;
 
+let canThrowT = true;
+let canThrowS = true;
+
 
 function setup() {
   createCanvas(600, 600);
@@ -133,20 +136,24 @@ function preload()
   function keyPressed()
   {
     if(gameOver) return;
-  if (keyCode === 32) {
+  if (keyCode === 32 && canThrowT) {
+    canThrowT = false;
     currentImageT = T2;
     throwSnowball(T1X + 70, T1Y+30, 1, "thrower");
     setTimeout ( () => {
       currentImageT = T1;
+      canThrowT = true;
     }, 1000);
   }
   
   
-  if (keyCode === 77) {
+  if (keyCode === 77 && canThrowS) {
+    canThrowS = false;
     currentImageS = S2;
     throwSnowball(S1X -20, S1Y+30, -1, "snowman");
     setTimeout ( () => {
       currentImageS = S1;
+      canThrowS = true;
     }, 1000);
   }
   }
